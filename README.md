@@ -31,9 +31,8 @@ bash src/baseline.sh
 #### Ours
 
 ```
-# evaluation on multi-document qa
+# evaluation on multi-document QA
 base src/ms_poe.sh
-
 ```
 
 ## Citation
