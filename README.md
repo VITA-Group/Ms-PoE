@@ -1,4 +1,4 @@
-# Ms-PoE
+# Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
