@@ -18,6 +18,7 @@ def setup_models(args):
         config.apply_layers = list(int(x) for x in args.apply_layers.split(','))
         config.compress_ratio_min = args.compress_ratio_min
         config.compress_ratio_max = args.compress_ratio_max
+        config.head_type = args.head_type
         print('Compress Ratio: from {} to {}'.format(config.compress_ratio_min, config.compress_ratio_max))
         model = MsPoELlamaForCausalLM.from_pretrained(args.model_name, config=config, cache_dir=args.cache_dir)
     else:

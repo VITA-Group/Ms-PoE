@@ -148,6 +148,7 @@ class MsPoELlamaAttention(nn.Module):
         self.compress_ratio_max = config.compress_ratio_max
 
         self.enable_head_metrics = True
+        self.head_type = config.head_type
         self.head_order = None
 
         self._init_rope()
@@ -190,12 +191,12 @@ class MsPoELlamaAttention(nn.Module):
     def _calculate_outlier(self, attn_weights):
         # attn_weights: [num_heads, q_len, kv_seq_len]
         average = attn_weights.mean(-1).unsqueeze(-1)
-        # outlier = - (attn_weights > 3 * average).float().mean(-1)[:,-1]
-        outlier = - (attn_weights > 2 * average).float().mean(-1).mean(-1)
+        outlier = - (attn_weights > 3 * average).float().mean(-1)[:,-1]
         head_orders = outlier.argsort()
 
-        # head_orders = np.arange(self.num_heads)
-        # head_orders = self.num_heads - head_orders - 1
+        if self.head_type == "normal":
+            head_orders = np.arange(self.num_heads)
+            head_orders = self.num_heads - head_orders - 1
 
         return head_orders
 

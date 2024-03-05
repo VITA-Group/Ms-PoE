@@ -69,7 +69,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--enable_ms_poe', action='store_true')
     parser.add_argument("--apply_layers", type=str, default="")
-    parser.add_argument("--head_metrics", type=str, default="normal")
+    parser.add_argument("--head_type", type=str, default=None)
     parser.add_argument("--compress_ratio_min", type=float, default=1.2)
     parser.add_argument("--compress_ratio_max", type=float, default=1.8)
 
