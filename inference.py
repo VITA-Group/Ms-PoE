@@ -127,7 +127,6 @@ if __name__ == '__main__':
                 examples.append(deepcopy(input_example))
                 all_model_documents.append(documents)
     if len(prompts) > args.sample_num:
-        print('Evaluate on {} samples (Total: {})'.format(args.sample_num, len(prompts)))
         prompts = prompts[:args.sample_num]
         examples = examples[:args.sample_num]
         all_model_documents = all_model_documents[:args.sample_num]

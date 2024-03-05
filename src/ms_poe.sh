@@ -1,5 +1,5 @@
 for answer_idx in $1; do
-    GPU=0
+    GPU=$2
     SEED=42
     NUM_DOCUMENTS=10
     models=lmsys/vicuna-7b-v1.5
