@@ -190,7 +190,7 @@ class MsPoELlamaAttention(nn.Module):
     def _calculate_outlier(self, attn_weights):
         # attn_weights: [num_heads, q_len, kv_seq_len]
         average = attn_weights.mean(-1).unsqueeze(-1)
-        ratio = float(self.head_metrics.split(',')[-1])
+        ratio = 3
 
         outlier = (attn_weights > ratio * average).float().mean(-1)[:,-1]
         outlier = - outlier
@@ -395,7 +395,6 @@ class MsPoELlamaForCausalLM(LlamaForCausalLM):
         num_layers = len(self.model.layers)
         for layer_idx in range(num_layers):
             if layer_idx in config.apply_layers:
-                print('Using APE Positional Embedding in layer {}'.format(layer_idx))
                 self.model.layers[layer_idx].self_attn = MsPoELlamaAttention(config)
 
     def _reset(self):

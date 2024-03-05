@@ -16,7 +16,6 @@ def setup_models(args):
     if args.enable_ms_poe:
         print('Using Ms-PoE Positional Embedding')
         config.apply_layers = list(int(x) for x in args.apply_layers.split(','))
-        print('Apply Layers:', config.apply_layers)
         config.compress_ratio_min = args.compress_ratio_min
         config.compress_ratio_max = args.compress_ratio_max
         print('Compress Ratio: from {} to {}'.format(config.compress_ratio_min, config.compress_ratio_max))
