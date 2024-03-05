@@ -196,8 +196,8 @@ class MsPoELlamaAttention(nn.Module):
         outlier = - outlier
         head_orders = outlier.argsort()
 
-        head_orders = np.arange(self.num_heads)
-        head_orders = self.num_heads - head_orders - 1
+        # head_orders = np.arange(self.num_heads)
+        # head_orders = self.num_heads - head_orders - 1
 
         return head_orders
 
