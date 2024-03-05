@@ -4,7 +4,7 @@
 
 Codes for this paper Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding
 
-Zhenyu Zhang, Runjin Chen, Shiwei Liu, Zhewei Yao, Olatunji Ruwase, Beidi Chen, Xiaoxia Wu, 
+Zhenyu Zhang, Runjin Chen, Shiwei Liu, Zhewei Yao, Olatunji Ruwase, Beidi Chen, Xiaoxia Wu, Zhangyang Wang
 
 ## Overview
 
