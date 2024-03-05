@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Codes for this paper Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding
+Codes for this paper "Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding"
 
 Zhenyu Zhang, Runjin Chen, Shiwei Liu, Zhewei Yao, Olatunji Ruwase, Beidi Chen, Xiaoxia Wu, Zhangyang Wang
 
