@@ -195,6 +195,10 @@ class MsPoELlamaAttention(nn.Module):
         outlier = (attn_weights > ratio * average).float().mean(-1)[:,-1]
         outlier = - outlier
         head_orders = outlier.argsort()
+
+        head_orders = np.arange(self.num_heads)
+        head_orders = self.num_heads - head_orders - 1
+
         return head_orders
 
 

@@ -35,6 +35,13 @@ bash src/baseline.sh
 base src/ms_poe.sh
 ```
 
+### Results
+
+| Core Document Index | 1    | 3    | 5    | 7    | 10   |
+| ------------------- | ---- | ---- | ---- | ---- | ---- |
+| Baseline            | 64.0 | 60.8 | 57.4 | 58.6 | 65.2 |
+| Ours                | 65.6 | 64.2 | 60.4 |      |      |
+
 ## Citation
 
 ```
