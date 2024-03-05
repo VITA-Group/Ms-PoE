@@ -13,7 +13,3 @@ nohup bash src/ms_poe.sh 10 3 > log_ours_10.out 2>&1 &
 # nohup bash src/baseline.sh 10 4 > log_baseline_10.out 2>&1 &
 
 
-
-
-
-
