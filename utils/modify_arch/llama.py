@@ -191,7 +191,7 @@ class MsPoELlamaAttention(nn.Module):
         # attn_weights: [num_heads, q_len, kv_seq_len]
         average = attn_weights.mean(-1).unsqueeze(-1)
         # outlier = - (attn_weights > 3 * average).float().mean(-1)[:,-1]
-        outlier = - (attn_weights > 3 * average).float().mean(-1).mean(-1)
+        outlier = - (attn_weights > 2 * average).float().mean(-1).mean(-1)
         head_orders = outlier.argsort()
 
         # head_orders = np.arange(self.num_heads)
