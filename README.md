@@ -38,5 +38,10 @@ base src/ms_poe.sh
 ## Citation
 
 ```
-TBD
+@article{zhang2024found,
+  title={Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding},
+  author={Zhang, Zhenyu and Chen, Runjin and Liu, Shiwei and Yao, Zhewei and Ruwase, Olatunji and Chen, Beidi and Wu, Xiaoxia and Wang, Zhangyang},
+  journal={arXiv preprint arXiv:2403.04797},
+  year={2024}
+}
 ```
